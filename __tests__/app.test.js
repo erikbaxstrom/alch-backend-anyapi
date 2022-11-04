@@ -3,7 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const { cookies } = require('../lib/cookies-data.js');
-const { specialIngredients } = require('../lib/specialIngredient-data.js');
+const { specialIngredients } = require('../lib/special-ingredients-data.js');
 
 describe('cookies routes', () => {
   beforeEach(() => {
