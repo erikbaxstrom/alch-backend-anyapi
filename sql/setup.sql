@@ -5,12 +5,12 @@ DROP TABLE IF EXISTS cookies;
 CREATE TABLE cookies (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR NOT NULL,
-    special VARCHAR NOT NULL,
+    special_ingredient VARCHAR NOT NULL,
     batch_size INT NOT NULL,
     contains_chocolate BOOLEAN NOT NULL
 );
 
-INSERT INTO cookies (name, special, batch_size, contains_chocolate)
+INSERT INTO cookies (name, special_ingredient, batch_size, contains_chocolate)
 VALUES
 ('Sugar Cookie', 'Royal Icing', 24, FALSE),
 ('Macaron', 'French Buttercream', 24, FALSE),
@@ -20,15 +20,15 @@ VALUES
 
 
 
-DROP TABLE IF EXISTS special;
+DROP TABLE IF EXISTS special_ingredient;
 
-CREATE TABLE special (
+CREATE TABLE special_ingredient (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR NOT NULL,
     type VARCHAR NOT NULL
 );
 
-INSERT INTO special (name, type)
+INSERT INTO special_ingredient (name, type)
 VALUES
 ('Royal Icing', 'Frosting'),
 ('French Buttercream', 'Filling'),

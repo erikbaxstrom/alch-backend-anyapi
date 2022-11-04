@@ -23,7 +23,7 @@ describe('cookies routes', () => {
     const expected = {
       id: '3',
       name: 'Gingerbread Humanoid',
-      special: 'Royal Icing',
+      specialIngredient: 'Royal Icing',
       batchSize: 36,
       containsChocolate: false,
     };
