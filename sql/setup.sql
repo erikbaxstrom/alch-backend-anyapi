@@ -17,3 +17,20 @@ VALUES
 ('Gingerbread Humanoid', 'Royal Icing', 36, FALSE),
 ('Date Swirl', 'Date Nut Filling', 64, FALSE),
 ('Chocolate Crinkle', 'Powdered Sugar', 36, FALSE);
+
+
+
+DROP TABLE IF EXISTS special;
+
+CREATE TABLE special (
+    id BIGINT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR NOT NULL,
+    type VARCHAR NOT NULL
+);
+
+INSERT INTO special (name, type)
+VALUES
+('Royal Icing', 'Frosting'),
+('French Buttercream', 'Filling'),
+('Date-Nut Filling', 'Filling'),
+('Powdered Sugar', 'Coating');
