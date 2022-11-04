@@ -17,6 +17,19 @@ describe('cookies routes', () => {
     // console.log('res.body', res.body);
     expect(res.body).toEqual(expected);
   });
+
+  it('/cookies/:id should return a cookie and details for a given id', async () => {
+    const res = await request(app).get('/cookies/3');
+    const expected = {
+      id: '3',
+      name: 'Gingerbread Humanoid',
+      special: 'Royal Icing',
+      batchSize: 36,
+      containsChocolate: false,
+    };
+    expect(res.body).toEqual(expected);
+  });
+
   afterAll(() => {
     pool.end();
   });
