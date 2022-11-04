@@ -30,10 +30,6 @@ describe('cookies routes', () => {
     };
     expect(res.body).toEqual(expected);
   });
-
-  // afterAll(() => {
-  //   pool.end();
-  // });
 });
 
 describe('special-ingredient routes', () => {
@@ -45,5 +41,19 @@ describe('special-ingredient routes', () => {
     const res = await request(app).get('/special-ingredients');
     const expected = specialIngredients;
     expect(res.body).toEqual(expected);
+  });
+
+  it('/special/:id should return details for a given ingredient id', async () => {
+    const res = await request(app).get('/special-ingredient/3');
+    const expected = {
+      id: 4,
+      name: 'Powdered Sugar',
+      type: 'Coating',
+    };
+    expect(res.body).toEqual(expected);
+  });
+
+  afterAll(() => {
+    pool.end();
   });
 });
