@@ -44,9 +44,9 @@ describe('special-ingredient routes', () => {
   });
 
   it('/special/:id should return details for a given ingredient id', async () => {
-    const res = await request(app).get('/special-ingredient/3');
+    const res = await request(app).get('/special-ingredients/4');
     const expected = {
-      id: 4,
+      id: '4',
       name: 'Powdered Sugar',
       type: 'Coating',
     };
