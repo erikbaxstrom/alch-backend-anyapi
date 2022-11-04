@@ -20,7 +20,7 @@ VALUES
 
 
 
-DROP TABLE IF EXISTS special_ingredient;
+DROP TABLE IF EXISTS special_ingredients;
 
 CREATE TABLE special_ingredient (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
@@ -28,7 +28,7 @@ CREATE TABLE special_ingredient (
     type VARCHAR NOT NULL
 );
 
-INSERT INTO special_ingredient (name, type)
+INSERT INTO special_ingredients (name, type)
 VALUES
 ('Royal Icing', 'Frosting'),
 ('French Buttercream', 'Filling'),
