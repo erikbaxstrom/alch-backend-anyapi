@@ -52,8 +52,8 @@ describe('special-ingredient routes', () => {
     };
     expect(res.body).toEqual(expected);
   });
+});
 
-  afterAll(() => {
-    pool.end();
-  });
+afterAll(() => {
+  pool.end();
 });
