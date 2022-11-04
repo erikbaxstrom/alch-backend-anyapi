@@ -3,6 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const { cookies } = require('../lib/cookies-data.js');
+const { specialIngredients } = require('../lib/specialIngredient-data.js');
 
 describe('cookies routes', () => {
   beforeEach(() => {
@@ -30,19 +31,19 @@ describe('cookies routes', () => {
     expect(res.body).toEqual(expected);
   });
 
-  afterAll(() => {
-    pool.end();
-  });
+  // afterAll(() => {
+  //   pool.end();
+  // });
 });
 
-// describe('backend-express-template routes', () => {
-//   beforeEach(() => {
-//     return setup(pool);
-//   });
-//   it('example test - delete me!', () => {
-//     expect(1).toEqual(1);
-//   });
-//   afterAll(() => {
-//     pool.end();
-//   });
-// });
+describe('special-ingredient routes', () => {
+  beforeEach(() => {
+    return setup(pool);
+  });
+
+  it('/special-ingredients should return a list of special ingredients and their ids', async () => {
+    const res = await request(app).get('/special-ingredients');
+    const expected = specialIngredients;
+    expect(res.body).toEqual(expected);
+  });
+});
