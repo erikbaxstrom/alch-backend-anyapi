@@ -16,7 +16,7 @@ VALUES
 ('Macaron', 'French Buttercream', 24, FALSE),
 ('Gingerbread Humanoid', 'Royal Icing', 36, FALSE),
 ('Date Swirl', 'Date Nut Filling', 64, FALSE),
-('Chocolate Crinkle', 'Powdered Sugar', 36, FALSE);
+('Chocolate Crinkle', 'Powdered Sugar', 36, TRUE);
 
 
 
