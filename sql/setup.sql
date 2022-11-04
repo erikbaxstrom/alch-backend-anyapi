@@ -22,7 +22,7 @@ VALUES
 
 DROP TABLE IF EXISTS special_ingredients;
 
-CREATE TABLE special_ingredient (
+CREATE TABLE special_ingredients (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR NOT NULL,
     type VARCHAR NOT NULL
